@@ -13,7 +13,7 @@ test = {
             'A TankAnt increases the damage of the ant it contains'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Besides costing more to deploy, what is the only difference between a
           TankAnt and a BodyguardAnt?
@@ -29,18 +29,18 @@ test = {
           'code': r"""
           >>> # Testing TankAnt parameters
           >>> TankAnt.food_cost
-          50ae32be3e31df6c59633df7fdfb3a72
+          6
           # locked
           >>> TankAnt.damage
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           >>> tank = TankAnt()
           >>> tank.armor
-          20d533d3e06345c8bd7072212867f2d1
+          2
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -269,11 +269,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> TankAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

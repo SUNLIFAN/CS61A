@@ -16,7 +16,7 @@ test = {
             'All Ant types except for NinjaAnt have a blocks_path attribute'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Which Ant types have a blocks_path attribute?'
         },
         {
@@ -28,7 +28,7 @@ test = {
             'blocks_path is False for all Ants'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What is the value of blocks_path for each Ant subclass?'
         },
         {
@@ -43,7 +43,7 @@ test = {
             "When there are no Ants in the Bee's place"
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'When is the path of a Bee blocked?'
         },
         {
@@ -55,7 +55,7 @@ test = {
             "Blocks the Bee's path"
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does a NinjaAnt do to each Bee that flies in its place?'
         }
       ],
@@ -69,30 +69,30 @@ test = {
           >>> # Testing NinjaAnt parameters
           >>> ninja = NinjaAnt()
           >>> ninja.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           >>> NinjaAnt.food_cost
-          62674984f877ec783f37e8b8b9c264d0
+          5
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> # Testing blocks_path
           >>> NinjaAnt.blocks_path
-          03456a09f22295a39ca84d133a26f63d
+          False
           # locked
           >>> HungryAnt.blocks_path
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           >>> FireAnt.blocks_path
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -107,21 +107,21 @@ test = {
           >>> p1.add_insect(ninja)              # Add the Bee and NinjaAnt to p1
           >>> bee.action(gamestate)
           >>> bee.place is ninja.place          # Did NinjaAnt block the Bee from moving?
-          03456a09f22295a39ca84d133a26f63d
+          False
           # locked
           >>> bee.place is p0
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           >>> ninja.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           >>> bee.action(gamestate)
           >>> bee.place is p0                   # Did ThrowerAnt block the Bee from moving?
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -137,21 +137,21 @@ test = {
           >>> p1.add_insect(ninja_fire)              # Add the Bee and NinjaAnt to p1
           >>> bee.action(gamestate)
           >>> bee.place is ninja_fire.place          # Did the "ninjaish" FireAnt block the Bee from moving?
-          03456a09f22295a39ca84d133a26f63d
+          False
           # locked
           >>> bee.place is p0
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           >>> ninja_fire.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           >>> bee.action(gamestate)
           >>> bee.place is p0                   # Did ThrowerAnt block the Bee from moving?
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -253,11 +253,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> NinjaAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

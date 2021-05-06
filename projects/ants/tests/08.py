@@ -13,7 +13,7 @@ test = {
             'The WallAnt class does not inherit from any class'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What class does WallAnt inherit from?'
         },
         {
@@ -25,7 +25,7 @@ test = {
             'A WallAnt attacks all the Bees in its place each turn'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': "What is a WallAnt's action?"
         },
         {
@@ -36,7 +36,7 @@ test = {
             'Ant subclasses do not inherit the action method from any class'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Where do Ant subclasses inherit the action method from?'
         },
         {
@@ -48,7 +48,7 @@ test = {
             'Reduce the armor of all Bees in its place'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           If a subclass of Ant does not override the action method, what is the
           default action?
@@ -65,21 +65,21 @@ test = {
           >>> # Testing WallAnt parameters
           >>> wall = WallAnt()
           >>> wall.name
-          b344415ec12ae63ab2f69b87a119dba6
+          'Wall'
           # locked
           >>> wall.armor
-          c9452203eb0b0f0bd2454586a6c2fc5c
+          4
           # locked
           >>> # `armor` should not be a class attribute
           >>> not hasattr(WallAnt, 'armor')
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           >>> WallAnt.food_cost
-          c9452203eb0b0f0bd2454586a6c2fc5c
+          4
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -120,11 +120,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> WallAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

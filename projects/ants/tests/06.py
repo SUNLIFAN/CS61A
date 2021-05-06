@@ -19,7 +19,7 @@ test = {
             'class, all HungryAnt instances in the game digest simultaneously'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Should digesting be an instance or class attribute? Why?'
         },
         {
@@ -31,7 +31,7 @@ test = {
             'Whenever a Bee is in its place'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'When is a HungryAnt able to eat a Bee?'
         },
         {
@@ -43,7 +43,7 @@ test = {
             'The closest Bee in either direction'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'When a HungryAnt is able to eat, which Bee does it eat?'
         }
       ],
@@ -57,14 +57,14 @@ test = {
           >>> # Testing HungryAnt parameters
           >>> hungry = HungryAnt()
           >>> HungryAnt.food_cost
-          c9452203eb0b0f0bd2454586a6c2fc5c
+          4
           # locked
           >>> hungry.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -76,22 +76,22 @@ test = {
           >>> place.add_insect(bee1)         # Add the Bee to the same place as HungryAnt
           >>> hungry.action(gamestate)
           >>> bee1.armor
-          73b94a1326ae2e803c3421016112207b
+          0
           # locked
           >>> bee2 = Bee(1)                 # A Bee with 1 armor
           >>> place.add_insect(bee2)
           >>> for _ in range(3):
           ...     hungry.action(gamestate)     # Digesting...not eating
           >>> bee2.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           >>> hungry.action(gamestate)
           >>> bee2.armor
-          73b94a1326ae2e803c3421016112207b
+          0
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -229,11 +229,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> HungryAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

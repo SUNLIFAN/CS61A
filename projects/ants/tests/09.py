@@ -13,7 +13,7 @@ test = {
             'All the Ant instances in the gamestate'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Which Ant does a BodyguardAnt guard?'
         },
         {
@@ -25,7 +25,7 @@ test = {
             'By allowing Bees to pass without attacking'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'How does a BodyguardAnt guard its ant?'
         },
         {
@@ -37,7 +37,7 @@ test = {
             "Nowhere, a BodyguardAnt has no knowledge of the ant that it's protecting"
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Where is the ant contained by a BodyguardAnt stored?'
         },
         {
@@ -52,7 +52,7 @@ test = {
             'There can never be two Ant instances in the same place'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'When can a second Ant be added to a place that already contains an Ant?'
         },
         {
@@ -64,7 +64,7 @@ test = {
             'Whichever Ant was placed there first'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           If two Ants occupy the same Place, what is stored in that place's ant
           instance attribute?
@@ -81,14 +81,14 @@ test = {
           >>> # Testing BodyguardAnt parameters
           >>> bodyguard = BodyguardAnt()
           >>> BodyguardAnt.food_cost
-          c9452203eb0b0f0bd2454586a6c2fc5c
+          4
           # locked
           >>> bodyguard.armor
-          20d533d3e06345c8bd7072212867f2d1
+          2
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -298,11 +298,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> BodyguardAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
