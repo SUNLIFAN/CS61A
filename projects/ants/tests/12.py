@@ -18,7 +18,7 @@ test = {
             'It throws water pellets instead of leaves'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'How is a ScubaThrower different from a regular ThrowerAnt?'
         },
         {
@@ -30,7 +30,7 @@ test = {
             'name, nearest_bee, is_watersafe'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Which inherited attributes and/or methods should ScubaThrower
           override?
@@ -47,14 +47,14 @@ test = {
           >>> # Testing ScubaThrower parameters
           >>> scuba = ScubaThrower()
           >>> ScubaThrower.food_cost
-          50ae32be3e31df6c59633df7fdfb3a72
+          6
           # locked
           >>> scuba.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': False,
@@ -73,14 +73,14 @@ test = {
           >>> ant = ScubaThrower()
           >>> water.add_insect(ant)
           >>> ant.place is water
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           >>> ant.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -89,14 +89,14 @@ test = {
           >>> ant = ThrowerAnt()
           >>> water.add_insect(ant)
           >>> ant.place is water
-          03456a09f22295a39ca84d133a26f63d
+          False
           # locked
           >>> ant.armor
-          73b94a1326ae2e803c3421016112207b
+          0
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -193,11 +193,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> ScubaThrower.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

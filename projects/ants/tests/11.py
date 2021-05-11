@@ -16,7 +16,7 @@ test = {
             'The insect goes for a swim.'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What happens when an insect is added to a Water Place?'
         },
         {
@@ -28,7 +28,7 @@ test = {
             'instance, the is_watersafe attribute depends on the given place of an ant'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What type of attribute should "is_watersafe" be?'
         },
         {
@@ -40,7 +40,7 @@ test = {
             'remove_ant, in the GameState class'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What method deals damage to an Insect and removes it from its place
           if its armor reaches 0?

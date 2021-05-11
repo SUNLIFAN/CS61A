@@ -13,7 +13,7 @@ test = {
             'GameState'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What class does QueenAnt inherit from?'
         },
         {
@@ -25,7 +25,7 @@ test = {
             'All QueenAnt instances are true QueenAnts'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Which QueenAnt instance is the true QueenAnt?'
         },
         {
@@ -37,7 +37,7 @@ test = {
             'It doubles the damage of all the ants behind it'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What happens to any QueenAnt instance that is instantiated after the
           first one?
@@ -64,7 +64,7 @@ test = {
             """
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does the true QueenAnt do each turn?'
         },
         {
@@ -76,7 +76,7 @@ test = {
             'If a Bee attacks the true QueenAnt'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Under what circumstances do Bees win the game?'
         }
       ],
@@ -89,15 +89,15 @@ test = {
           'code': r"""
           >>> # Testing QueenAnt parameters
           >>> QueenAnt.food_cost
-          7cd035adf49fc93a635b4e8bb2e28bd4
+          7
           # locked
           >>> queen = QueenAnt()
           >>> queen.armor
-          d89cf7c79d5a479b0f636734143ed5e6
+          1
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -452,11 +452,11 @@ test = {
           'code': r"""
           >>> from ants import *
           >>> QueenAnt.implemented
-          c7a88a0ffd3aef026b98eef6e7557da3
+          True
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
