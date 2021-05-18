@@ -586,11 +586,14 @@ class MuProcedure(Procedure):
     def __init__(self, formals, body):
         """A procedure with formal parameter list FORMALS (a Scheme list) and
         Scheme list BODY as its definition."""
+        validate_type(formals, scheme_listp, 0, 'MuProcedure')
+        validate_type(body, scheme_listp, 1, 'MuProcedure')
         self.formals = formals
         self.body = body
 
     # BEGIN PROBLEM 18
-    "*** YOUR CODE HERE ***"
+    def make_call_frame(self,args,env):
+        return env.make_child_frame(self.formals,args)
     # END PROBLEM 18
 
     def __str__(self):
@@ -606,7 +609,8 @@ def do_mu_form(expressions, env):
     formals = expressions.first
     validate_formals(formals)
     # BEGIN PROBLEM 18
-    "*** YOUR CODE HERE ***"
+    body = expressions.rest
+    return MuProcedure(formals,body)
     # END PROBLEM 18
 
 SPECIAL_FORMS['mu'] = do_mu_form
